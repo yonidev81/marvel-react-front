@@ -3,6 +3,7 @@ body {
   color: #f7f7f7;
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .logo img {
@@ -11,6 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
+  object-fit: cover;
 }
 
 .header {
@@ -21,22 +23,107 @@ body {
   display: flex;
 }
 
+.datadisplay {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .card {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.cardcharacter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
   margin: 20px;
 }
 
-.title {
-  font-size: 18px;
+.cardcharacter img {
+  width: 230px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.card :hover {
+  color: red;
+}
+
+main {
+  box-sizing: border-box;
+  border: solid 1px lightgray;
+}
+
+.title,
+.name {
+  font-size: 16px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .description {
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
   line-height: 20px;
 }
 
 .card img {
-  width: 170px;
+  width: 230px;
+  height: 280px;
+  border-radius: 10px;
+  image-rendering: auto;
+}
+
+.card img :hover {
+  width: 300px;
+  height: 400px;
+}
+
+.comiccontent {
+  width: 210px;
+  height: 310px;
+  /*  background-color: color; */
+}
+
+.menu :link {
+  display: inline;
+  word-spacing: 40px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+button {
+  color: black;
+}
+
+.subheader {
+  margin-bottom: 20px;
+}
+
+.charcontent {
+  width: 230px;
   height: 250px;
+}
+
+.maincharacter {
+  box-sizing: border-box;
+  border: solid 1px lightgray;
+  display: flex;
 }

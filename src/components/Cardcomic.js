@@ -6,15 +6,17 @@ const Cardcomic = ({ data }) => {
   const url = data.thumbnail.path + "." + data.thumbnail.extension;
 
   return (
-    <>
+    <main>
       <div className="card">
-        <div className="title"> {data.title}</div>
-        <div className="description"> {data.description}</div>
         <div>
           <img alt="comics" src={url} />
         </div>
+        <div className="comiccontent">
+          <div className="title"> {data.title}</div>
+          <div className="description"> {data.description}</div>
+        </div>
       </div>
-    </>
+    </main>
   );
 };
 
