@@ -29,6 +29,34 @@ body {
   flex-direction: row;
 }
 
+.pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.previous {
+  height: 50px;
+  width: 150px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.next {
+  height: 50px;
+  width: 150px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
 .card {
   margin: 20px;
   display: flex;

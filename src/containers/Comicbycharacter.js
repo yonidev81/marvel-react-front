@@ -8,6 +8,7 @@ import Cardcomic from "../components/Cardcomic";
 // Déclaration de fonctions
 const Comicbycharacter = () => {
   const [data, setData] = useState([]);
+  const [isLoading, setIsloading] = useState(true);
 
   // Uitlisation de params
   const params = useParams();
@@ -16,15 +17,18 @@ const Comicbycharacter = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(`http://localhost:3000/comics/${id}`);
-
+      console.log("2 ====>", response.data);
       setData(response.data);
+      setIsloading(false);
     };
     fetchData();
   }, [id]);
 
-  return (
+  return isLoading ? (
+    <span> Downloading ...</span>
+  ) : (
     <div>
-      {data &&
+      {data.data &&
         data.data.results.map((comic, index) => {
           return <Cardcomic key={index} data={comic} />;
         })}
