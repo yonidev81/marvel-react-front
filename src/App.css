@@ -81,8 +81,10 @@ body {
 }
 
 .cardcharacter img {
-  width: 230px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
+  object-position: center;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -109,15 +111,19 @@ main {
 }
 
 .card img {
-  width: 230px;
-  height: 280px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 10px;
   image-rendering: auto;
 }
 
 .card img :hover {
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .comiccontent {
@@ -152,6 +158,5 @@ button {
 
 .maincharacter {
   box-sizing: border-box;
-  border: solid 1px lightgray;
   display: flex;
 }

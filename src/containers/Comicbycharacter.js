@@ -1,7 +1,12 @@
 //Imports
 
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, {
+  useState,
+  useEffect
+} from "react";
+import {
+  useParams
+} from "react-router-dom";
 import axios from "axios";
 import Cardcomic from "../components/Cardcomic";
 
@@ -9,10 +14,10 @@ import Cardcomic from "../components/Cardcomic";
 const Comicbycharacter = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsloading] = useState(true);
-
-  // Uitlisation de params
-  const params = useParams();
+  const params = useParams()
   const id = params.characterId;
+  // Uitlisation de params
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,15 +29,25 @@ const Comicbycharacter = () => {
     fetchData();
   }, [id]);
 
-  return isLoading ? (
-    <span> Downloading ...</span>
-  ) : (
-    <div>
-      {data.data &&
-        data.data.results.map((comic, index) => {
-          return <Cardcomic key={index} data={comic} />;
-        })}
-    </div>
-  );
-};
+
+
+  return isLoading ?
+
+    ( < span > Downloading... < /span>) : ( <
+      div > {
+        data && data.data.results.map((comic, index) => {
+          /*  console.log("comic ===>", comic); */
+
+          return <Cardcomic key = {
+            index
+          }
+          data = {
+            comic
+          }
+          />
+        })
+      } < /div>
+    )
+}
+
 export default Comicbycharacter;
